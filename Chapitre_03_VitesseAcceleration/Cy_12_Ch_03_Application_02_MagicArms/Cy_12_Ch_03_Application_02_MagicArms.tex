@@ -114,12 +114,8 @@ $\vectv{P}{3}{0}=\vectv{O_3}{3}{0}+\vecto{3}{0}\wedge\vect{O_3 P}$	$=l_1\dot\alp
 $\vectv{P}{3}{0}=l_1\dot\alpha\vx1+l_2(\dot\alpha+\dot\beta)\vect{x_2}-R\sin\varphi(\dot\alpha+\dot\beta)\vect{y_2}-R\dot\varphi\vect{x_3}$
 \end{corrige}\else\fi
 
-\vspace{.3cm}
 
-On donne l'évolution des vitesses angulaires des moteurs du manège en fonction du temps.
-\begin{center}
-\includegraphics[width=\linewidth]{img2}
-\end{center}
+On donne, sur la figure en bas de page (à gauche) l'évolution des vitesses angulaires des moteurs du manège en fonction du temps.
 
 \question{\label{lab} Déterminer les valeurs des paramètres $\dot{\alpha}$, $\dot{\beta}$ et $\dot{\varphi}$
 puis l'expression analytique des positions angulaires $\alpha(t)$ et $\beta(t)$ et $\varphi(t)$ dans l'intervalle de temps $[17;27]$ secondes en sachant qu'à l'instant $t=\SI{17}{s}$, on a $\alpha=\SI{10,5}{rad}$, $\beta=\SI{3,76}{rad}$ et $\varphi=-\SI{10,676}{rad}$.}
@@ -231,14 +227,36 @@ Dans le cas ou les vitesses angulaires sont constantes, les accélérations angu
 
 \end{corrige}\else\fi
 
-\vspace{.3cm}
 
-Le graphe ci-dessous, obtenu par simulation numérique, présente le module de la vitesse du passager $P$ par rapport au bâti 0 ainsi que le module de l'accélération du passager $P$ par rapport au bâti 0 en fonction du temps. 
-\begin{center}
-\includegraphics[width=\linewidth]{img3}
-\end{center}
+Le graphe ci-dessous (à droite), obtenu par simulation numérique, présente le module de la vitesse du passager $P$ par rapport au bâti 0 ainsi que le module de l'accélération du passager $P$ par rapport au bâti 0 en fonction du temps. 
+%\begin{figure*}[!h]
+%\centering
+%\includegraphics[width=.45\linewidth]{img2}
+%\hfill
+%\includegraphics[width=.45\linewidth]{img3}
+%\end{figure*}
 
-\question{Comparer les résultats obtenus à la question \ref{lab} à ceux du graphe pour le temps $t_1=19,8\;s.$.}
+\begin{figure*}[!h]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{img2}
+%  \caption{A subfigure}
+ % \label{fig:sub1}
+\end{subfigure}%
+\hfill
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{img3}
+  %\caption{A subfigure}
+ % \label{fig:sub2}
+\end{subfigure}
+%\caption{A figure with two subfigures}
+%\label{fig:test}
+\end{figure*}
+
+
+\question{Comparer les résultats obtenus à la question \ref{lab} à ceux du graphe pour le temps $t_1=\SI{19,8}{s}$.}
 \ifprof
 \begin{corrige}
 
