@@ -35,8 +35,7 @@ Les roues utilisés pour le robot omnirob sont des roues holonomes  également a
 
 Le paramétrage cinématique est donné dans les pages suivantes. 
 
-\subparagraph{}
-\textit{En analysant la géométrie du contact entre les rouleaux et le sol, proposer la liaison équivalente entre le châssis 3 et le sol.}
+\question{En analysant la géométrie du contact entre les rouleaux et le sol, proposer la liaison équivalente entre le châssis 3 et le sol.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
@@ -69,8 +68,7 @@ On peut alors démontrer que la fluctuation du rayon $r$ de l'ellipsoïde est te
 
 Pour les roues de cette étude, $\alpha_a=-45\degres$ et $n=8$ rouleaux, on obtient une fluctuation de rayon de \SI{14}{\%} lorsque le point de contact $I_{1a}$ se déplace le long de la corde de rouleau 1. On supposera donc le rayon $r$ comme étant constant. 
 
-\subparagraph{}
-\textit{Déterminer $\vectv{I_{1a}}{1}{2}$ en fonction du paramétrage du robot dans la base $\mathcal{B}_3$.}
+\question{Déterminer $\vectv{I_{1a}}{1}{2}$ en fonction du paramétrage du robot dans la base $\mathcal{B}_3$.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
@@ -79,21 +77,18 @@ On constate que la variation d'angle $\theta_{2a}$ lors du contact d'un rouleau 
 $\theta_{2a} << 1$. Ainsi, en effectuant un développement limité à l'ordre 1 de $\cos \theta_{2a}$, on gardera pour la suite du sujet une expression de la vitesse $\vectv{I_{1a}}{1}{2}=r\dfrac{\sqrt{2}}{2}\dot{\theta}_{1a} \begin{pmatrix}
 1 \\ 1 \\ 0 \end{pmatrix}_{\mathcal{B}_3}$
 
-
-\subparagraph{}
-\textit{En vous aidant de l'annexe 3, déterminer $\vectv{I_{1a}}{2}{3}$ en fonction du paramétrage du robot.}
+\question{En vous aidant de l'annexe 3, déterminer $\vectv{I_{1a}}{2}{3}$ en fonction du paramétrage du robot.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
 
-\subparagraph{}
-\textit{En vous aidant de l'annexe 1, déterminer $\vectv{I_{1a}}{3}{0}$ en fonction du paramétrage du robot et des notations du torseur cinématique $\torseurcin{V}{3}{0}$ proposées.}
+\question{En vous aidant de l'annexe 1, déterminer $\vectv{I_{1a}}{3}{0}$ en fonction du paramétrage du robot et des notations du torseur cinématique $\torseurcin{V}{3}{0}$ proposées.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
 
-\subparagraph{}
-\textit{Déterminer $\vectg{I_{1a}}{3}{0}$.}
+
+\question{Déterminer $\vectg{I_{1a}}{3}{0}$.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
@@ -117,8 +112,7 @@ V_{RX} \\ V_{RY}\\ \omega\end{pmatrix} $ exprimé dans la base locale $\mathcal{
 Dans un premier temps nous allons chercher les relations entre $\dot{X}_R = f\left(\dot{q}_k \right)$ pour 
 $k=a$, $b$, $c$ et $d$.
 
-\subparagraph{}
-\textit{À partir des équations des questions 2 à 4, déduire de la condition de roulement sans glissement du rouleau 1 par rapport au sol 0 la relation $\dot{X}_R = f\left(\dot{q}_k \right)$  pour la roue $a$. On utilisera les notations proposées e ton rappelle que l'on note $\omega=\dot{\varphi}$.}
+\question{À partir des équations des questions 2 à 4, déduire de la condition de roulement sans glissement du rouleau 1 par rapport au sol 0 la relation $\dot{X}_R = f\left(\dot{q}_k \right)$  pour la roue $a$. On utilisera les notations proposées e ton rappelle que l'on note $\omega=\dot{\varphi}$.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
@@ -145,23 +139,16 @@ Trouver le modèle cinématique direct (MCD) revient à obtenir $\dot{X}_R = f\l
  \item (eq1)+(eq2)-(eq3)-(eq4).
 \end{itemize}
 
-
-
-\subparagraph{}
-\textit{Déduire de ces 3 simplifications, le modèle cinématique direct (MCD) du robot, $\dot{X}_R = f\left(\dot{q}_k \right)$.}
+\question{Déduire de ces 3 simplifications, le modèle cinématique direct (MCD) du robot, $\dot{X}_R = f\left(\dot{q}_k \right)$.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
 
-\subparagraph{}
-\textit{Déduire également à l'aide des équations (eq1), (eq2), (eq3), (eq4), le modèle cinématique inverse (MCI) du robot 
+\question{Déduire également à l'aide des équations (eq1), (eq2), (eq3), (eq4), le modèle cinématique inverse (MCI) du robot 
 $\dot{X}_R = f\left(\dot{q}_k \right)$.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
-
-
-
 
 Le contrôle du robot peut également être envisagé dans l'espace de travail lié au bâti à savoir le système de coordonnées du repère global.
 
@@ -183,8 +170,7 @@ V_X \\ V_Y \\ \omega
 \end{pmatrix}.
 $$
 
-\subparagraph{}
-\textit{À partir des résultats précédents, indiquer comment commander la vitesse de rotation des moteurs des 4 roues $a$, $b$, $c$ et $d$ pour que le robot se déplace suivant une direction diagonale puis tourne sur lui-même, $\omega_m$ est une vitesse de rotation algébrique.}
+\question{À partir des résultats précédents, indiquer comment commander la vitesse de rotation des moteurs des 4 roues $a$, $b$, $c$ et $d$ pour que le robot se déplace suivant une direction diagonale puis tourne sur lui-même, $\omega_m$ est une vitesse de rotation algébrique.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi
@@ -193,10 +179,7 @@ $$
 \includegraphics[width=\linewidth]{fig_07}
 \end{center}
 
-
-
-\subparagraph{}
-\textit{Conclure sur le comportement omnidirectionnel du robot des limites possibles.}
+\question{Conclure sur le comportement omnidirectionnel du robot des limites possibles.}
 \ifprof%
 \begin{corrige}
 \end{corrige}\else\fi

@@ -19,6 +19,8 @@ Magic Arms -- \ifprof Corrigé \else Sujet \fi}
 \includegraphics[width=\textwidth]{fig_00}
 \end{marginfigure}
 
+\ifprof
+\else
 
 La manège Magic Arms dont la modélisation ainsi qu'un extrait de cahier des charges fonctionnel est composé d'une structure métallique d'environ \SI{12}{m} de haut avec deux bras mobiles. Les passagers s'assoient sur 39 pièces disposées sur une plate-forme tournante. Dès que tous les passagers sont assis et attachés, la nacelle tourne autour de son axe, le bras principal (bras \textbf{1}) et le bras secondaires (bras \textbf{2}), liés l'un à l'autre au début du cycle, commencent à tourner. Après 9 secondes, le maximum de hauteur est atteint et les deux bras se désindexent et se mettent à tourner indépendamment l'un de l'autre. Tous les mouvements sont pilotés par ordinateur. 
 
@@ -32,6 +34,7 @@ Le manège, schématisé ci-dessus, comporte :
 \item un bras secondaire 2 assimilé à une barre $BO_2O_3$. Il est en liaison pivot parfait d'axe $(O_2,\vect{z_2})$ caractérisée par le paramètre $\beta$ avec le bras principal \textbf{1}. On pose $\vect{O_2O_3}=-l_2\vect{y_2}$;
 \item une nacelle \textbf{2} assimilée à un disque de centre $O_3$ et de rayon $R$. Elle est en liaison parfaite d'axe $(O_3,\vect{y_2})$ caractérisée par le paramètre $\varphi$ avec le bras \textbf{2}. On s'intéresse plus particulièrement à un passager considéré comme un point matériel $P$ tel que $\vect{O_3P}=-R\vect{z_3}$.
 \end{itemize}
+\fi
 
 \question{Construire les figures planes associées au schéma cinématique.}
 \ifprof
@@ -227,7 +230,8 @@ Dans le cas ou les vitesses angulaires sont constantes, les accélérations angu
 
 \end{corrige}\else\fi
 
-
+\ifprof
+\else
 Le graphe ci-dessous (à droite), obtenu par simulation numérique, présente le module de la vitesse du passager $P$ par rapport au bâti 0 ainsi que le module de l'accélération du passager $P$ par rapport au bâti 0 en fonction du temps. 
 %\begin{figure*}[!h]
 %\centering
@@ -254,6 +258,7 @@ Le graphe ci-dessous (à droite), obtenu par simulation numérique, présente le
 %\caption{A figure with two subfigures}
 %\label{fig:test}
 \end{figure*}
+\fi
 
 
 \question{Comparer les résultats obtenus à la question \ref{lab} à ceux du graphe pour le temps $t_1=\SI{19,8}{s}$.}
