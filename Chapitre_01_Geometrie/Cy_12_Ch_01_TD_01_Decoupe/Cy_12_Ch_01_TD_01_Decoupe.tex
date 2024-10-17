@@ -1,9 +1,9 @@
 % "{'classe':('PSI'),'chapitre':'cin_geo','type':('td','todo'),'titre':'Tête de découpe de tissus', 'source':'CCP MP 2018','comp':(''),'corrige':True}"
 %\setchapterimage{fig_00.jpg}
 \chapter*{Application \arabic{cptApplication} \\ 
-TODO -- Tête de découpe de tissus -- \ifprof Corrigé \else Sujet \fi}
+Tête de découpe de tissus -- \ifprof Corrigé \else Sujet \fi}
 \addcontentsline{toc}{section}{Application \arabic{cptApplication} : 
-TODO -- Tête de découpe de tissus -- \ifprof Corrigé \else Sujet \fi}
+Tête de découpe de tissus -- \ifprof Corrigé \else Sujet \fi}
 
 \iflivret \stepcounter{cptApplication} \else
 \ifprof  \stepcounter{cptApplication} \else \fi
@@ -83,6 +83,19 @@ On pose $\omega_{ij}(t)=\dfrac{\dd \theta_{ij}(t)}{\dd t} = \dot{\theta}_{ij}(t)
 \else
 \fi
 
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{fig_04}
+
+\caption{Évolution théorique (---) et approximée (- -) du paramètre $\lambda$.}
+\end{marginfigure}
+
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{fig_05}
+
+\caption{Évolution théorique (---) et approximée (- -) de la vitesse  $\dot{\lambda}$ pour $\dot{\theta}_{32}=\SI{3000}{tr.min^{-1}}$.}
+\end{marginfigure}
+
+
 \question{À l’aide d’une fermeture géométrique, déterminer la relation entre le paramètre $\lambda(t)$, l’angle
 $\theta_{32}(t)$ et les données géométriques du système.}
 \ifprof
@@ -108,11 +121,6 @@ l’application numérique et conclure sur le respect de l’exigence 1.2.2.3.}
 
 Afin de valider cette approximation, les deux fonctions mathématiques ont été tracées sur un tour de
 l’arbre moteur.
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_04}
-
-\caption{Évolution théorique (---) et approximée (- -) du paramètre $\lambda$.}
-\end{marginfigure}
 
 \question{Conclure sur l’adoption de la loi approximée dans la suite de l’étude.}
 \ifprof
@@ -144,11 +152,6 @@ loi en vitesse de la lame notée $\dot{\lambda}(t)$.
 Cette loi en vitesse simplifiée a été tracée sur la figure suivante pour être comparée à la loi obtenue à
 partir du modèle établi en question \ref{q17}.
 
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_05}
-
-\caption{Évolution théorique (---) et approximée (- -) de la vitesse  $\dot{\lambda}$ pour $\dot{\theta}_{32}=\SI{3000}{tr.min^{-1}}$.}
-\end{marginfigure}
 
 
 \question{La simplification de la loi en vitesse permet-elle de valider l’exigence 1.2.2.4. ?}
