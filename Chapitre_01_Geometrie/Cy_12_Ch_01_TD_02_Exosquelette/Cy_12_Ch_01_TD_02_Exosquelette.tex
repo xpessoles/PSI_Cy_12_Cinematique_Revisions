@@ -1,5 +1,5 @@
 % "{'classe':('PSI'),'chapitre':'cin_geo','type':('td','todo'),'titre':'Exosquelette Atalante', 'source':'CCS PSI 2023','comp':('GEO-03'),'corrige':True}"
-%\setchapterimage{fig_00.jpg}
+\setchapterimage{fig_00.jpg}
 \chapter*{TD \arabic{cptTD} \\ 
 Exosquelette Atalante -- \ifprof Corrigé \else Sujet \fi}
 \addcontentsline{toc}{section}{TD \arabic{cptTD} : 
@@ -10,153 +10,114 @@ Exosquelette Atalante -- \ifprof Corrigé \else Sujet \fi}
 \fi
 
 
-\marginnote[1cm]{
-%\UPSTIcompetence[2]{B2-14}
-%\UPSTIcompetence[2]{C1-05}
-%\UPSTIcompetence[2]{C2-07}
-}
 
-\marginnote{CCS PSI 2023}
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_01.png}
-\end{marginfigure}
+\marginnote{\textit{D'après CCS PSI 2023.}}
+\marginnote{\xpComp{GEO}{03}}
 
 
 
-
-\subsection*{Présentation du système}
-\ifprof
-\else
-Le système étudié dans ce sujet est une tête de coupe de tissus conçue et réalisée par la société
-française Lectra, leader mondial dans la découpe automatisée des tissus.
-Un système de découpe automatisé de tissus est composé :
-\begin{itemize}
-\item d'une table de découpe sur laquelle le tissus à découper (appelé matelas) est maintenu en position
-par aspiration ;
-\item d'un bras transversal qui se déplace en translation de direction $\vect{y_0}$ par rapport à la table ;
-\item d'une tête de coupe qui se déplace en translation de direction $\vect{x_0}$ par rapport au bras transversal ;
-\item d'un ordinateur qui pilote l’ensemble du système. 
-\end{itemize}
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_02}
-\end{marginfigure}
-
-\fi
-
-\begin{obj}
-Déterminer la loi entrée/sortie de la chaîne cinématique de la tête de coupe et valider son
-comportement vis-à-vis des exigences :
-\begin{itemize}
-\item 1.2.2.3 : la lame doit se déplacer d'une amplitude minimale de $\SI{20}{mm}$;
-\item 1.2.2.4 : la vitesse de coupe maximale doit être de \SI{4}{m.s^{-1}} à $\pm\,5\,\%$. 
-\end{itemize}
-\end{obj}
-
-\subsection*{Modélisation du comportement de la tête de coupe}
-
-La découpe du tissu est réalisée par un mouvement de translation alternative d’une lame par rapport
-au matelas de tissus. Ce mouvement est obtenu par un système bielle-manivelle dont le schéma cinématique
-est donné à la figure suivante. Les mouvements de translation de la tête de coupe par rapport à la
-table impliquent que les bases $\base{x_2}{y_2}{z_2}$ et $\base{x_0}{y_0}{z_0}$, liées respectivement à la tête de coupe et à la table, sont identiques.
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_03}
-\end{marginfigure}
-
-\begin{itemize} 
-\item On associe le repère $\rep{2}=\repere{A}{x_2}{y_2}{z_2}$ à la tête 2, le repère $\rep{3}=\repere{A}{x_3}{y_3}{z_3}$ à la manivelle 3, le repère $\rep{4}=\repere{B}{x_4}{y_4}{z_4}$ à la bielle 4 et le repère $\rep{5}=\repere{C}{x_2}{y_2}{z_2}$ à la lame 5.
-\item La manivelle 3 est en liaison pivot avec la tête 2, d'axe $\axe{A}{y_2}$ et d'angle $\theta_{32}(t)=\angl{x_2}{x_3}=\angl{z_2}{z_3}$.
-\item La manivelle 3 est en liaison pivot avec la bielle 4, d'axe $\axe{B}{y_2}$ et d'angle $\theta_{43}(t)=\angl{x_3}{x_4}=\angl{z_3}{z_4}$.
-\item La bielle 4 est en liaison pivot avec la lame 5, d'axe $\axe{C}{y_0}$ et d'angle $\theta_{54}(t)=\angl{x_4}{x_2}=\angl{z_4}{z_2}$.
-\item La lame 5 est en liaison glissière avec la tête 2, de direction ${z_2}$ et de paramètre linéaire $\lambda(t)$.
-
-\end{itemize}
-
-On pose $\omega_{ij}(t)=\dfrac{\dd \theta_{ij}(t)}{\dd t} = \dot{\theta}_{ij}(t)$, $\vect{AB}=L_3\vect{z_3}$ avec $L_3=\SI{12,5}{mm}$, $\vect{BC}=L_4\vect{z_4}$ avec $L_4=\SI{80}{mm}$ et $\vect{AC}=\lambda(t)\vect{z_2}$.
-
-\question{\label{q17} Déterminer la relation entre les paramètres angulaires $\theta_{32}(t)$, $\theta_{43}(t)$ et $\theta_{54}(t)$.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_04}
-
-\caption{Évolution théorique (---) et approximée (- -) du paramètre $\lambda$.}
-\end{marginfigure}
-
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{fig_05}
-
-\caption{Évolution théorique (---) et approximée (- -) de la vitesse  $\dot{\lambda}$ pour $\dot{\theta}_{32}=\SI{3000}{tr.min^{-1}}$.}
-\end{marginfigure}
-
-
-\question{À l’aide d’une fermeture géométrique, déterminer la relation entre le paramètre $\lambda(t)$, l’angle
-$\theta_{32}(t)$ et les données géométriques du système.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
-
-\question{En déduire l’expression littérale de l’amplitude des oscillations de la lame, notée $\Delta z$. Faire
-l’application numérique et conclure sur le respect de l’exigence 1.2.2.3.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
-
-\question{Calculer le rapport $\left(\dfrac{L_4}{L_3}\right)^2$ et la comparer à la valeur 1. Montrer alors que la loi obtenue à la question \ref{q17} peut se mettre sous la forme $\lambda(t)\simeq L_3 \cos \theta_{32}+L_4$.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
-
-Afin de valider cette approximation, les deux fonctions mathématiques ont été tracées sur un tour de
-l’arbre moteur.
-
-\question{Conclure sur l’adoption de la loi approximée dans la suite de l’étude.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
-
-
-Afin de valider le critère associé à l’exigence de vitesse de coupe, il est nécessaire de déterminer la
-loi en vitesse de la lame notée $\dot{\lambda}(t)$.
-
-
-\ifprof
-\else
 \begin{marginfigure}
 \centering
-\includegraphics[width=3cm]{Cy_12_Ch_01_TD_01_Decoupe_qr}
+\includegraphics[width=.5\linewidth]{fig_01}
 \end{marginfigure}
-\fi
 
-\question{Déterminer l’expression littérale de $\dot{\lambda}(t)$ à partir du modèle simplifié de $\lambda(t)$.}
+%En phase de rééducation à la proprioception de la verticalité et de la marche, il est nécessaire d'éviter la chute du patient. 
+Des essais, menés sur des humains valides, ont permis de mettre en avant que lors d'une marche en ligne droite, une erreur de positionnement du talon de $\pm \SI{5}{mm}$ risque d'amener à un déséquilibre, et donc à une chute (exigence 1.2.1.1, figure \ref{ccs_psi_2023_fig_02}). Il est donc nécessaire de déterminer l'erreur de positionnement angulaire admissible sur chacun des axes de l'exosquelette pour éviter cette chute.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.9\linewidth]{fig_02}
+\caption{Diagramme des exigences partiel \label{ccs_psi_2023_fig_02}}
+\end{figure}
+
+
+Dans toute l'étude, les hypothèses et notations seront les suivantes (figure \ref{ccs_psi_2023_fig_04}) :
+
+\begin{itemize}
+  \item l'étude est menée dans le plan sagittal $\left(A, \vec{y}_{1}, \vec{z}_{1}\right)$, où $\vec{z}_{1}$ est vertical ascendant ;
+  \item les différentes caractéristiques de dimension, masse et inertie des différents solides sont précisées annexe B ;
+  \item le buste 1 étant animé d'un mouvement de translation rectiligne uniforme par rapport au référentiel terrestre, il est considéré comme galiléen ;
+  \item l'étude se limite à la partie de la marche pour laquelle une des deux jambes est totalement décollée du sol (de $70 \%$ à $100 \%$ de la foulée sur la figure 3) ;
+  \item le buste 1 est en liaison pivot d'axe $\left(A, \vec{x}_{1}\right)$ avec la cuisse 2 ; on note $\theta_{1}=\left(\vec{y}_{1}, \vec{y}_{2}\right)=\left(\vec{z}_{1}, \vec{z}_{2}\right)$;
+  \item l'ensemble \{pied+tibia 3 , considéré comme solidaire, est en liaison pivot d'axe $\left(B, \vec{x}_{1}\right)$ avec la cuisse 2 ; on note $\theta_{2}=\left(\vec{y}_{2}, \vec{y}_{3}\right)=\left(\vec{z}_{2}, \vec{z}_{3}\right)$;
+  \item les liaisons décrites précédemment sont supposées parfaites.
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.8\textwidth]{2023_05_12_54c6a64d2ffce28d5c72g-03}
+\caption{Modélisation utilisée pour la marche en ligne droite \label{ccs_psi_2023_fig_04}}
+\end{figure}
+
+
+Les positions des différents axes sont asservies à une consigne de référence afin d'obtenir la position désirée pour le point $D$ caractérisant la pointe du talon. Le cahier des charges impose que la position dans l'espace du point $D$ par rapport au point $A$ doive être celle désirée, avec une incertitude maximale de $S_{D}=5 \mathrm{~mm}$. On pose :
+
+$$
+\overrightarrow{A D}=Y \vec{y}_{1}+Z \vec{z}_{1}
+$$
+
+% Q1
+\question{\label{ccs_psi_2023_q_01}Déterminer les expressions de $Y$ et $Z$, en fonction de $\theta_{1}, \theta_{2}, L_{2}$ et $L_{3}$.}
 \ifprof
 \begin{corrige}
 \end{corrige}
 \else
 \fi
 
-Cette loi en vitesse simplifiée a été tracée sur la figure suivante pour être comparée à la loi obtenue à
-partir du modèle établi en question \ref{q17}.
+L'erreur de positionnement du talon est modélisée par une variation autour d'une position connue. Cette position est paramétrée par les coordonnées $Y_{0}$ et $Z_{0}$ pour le point $D$, et par des angles $\theta_{1,0}$ et $\theta_{2,0}$ pour les liaisons pivots. Ce paramétrage se traduit, pour une variation angulaire $\Delta_{\theta}$, considérée égale sur chacun des axes, à des variations de position, $\Delta_{Y}$ et $\Delta_{Z}$, du point $D$. On suppose $\Delta_{\theta}$ faible, proche de 0 .
 
-
-
-\question{La simplification de la loi en vitesse permet-elle de valider l’exigence 1.2.2.4. ?}
+%Q2
+\question{\label{ccs_psi_2023_q_02}  À l'aide du résultat de la question \ref{ccs_psi_2023_q_01}, écrit à la position $\left(Y_{0}, Z_{0}\right)$, puis à la position $\left(Y_{0}+\Delta_{Y}, Z_{0}+\Delta_{Z}\right)$, déterminer les expressions de $\Delta_{Y}$ et $\Delta_{Z}$, en fonction de $\theta_{1,0}, \theta_{2,0}, \Delta_{\theta}, L_{2}$ et $L_{3}$.}
 \ifprof
 \begin{corrige}
 \end{corrige}
 \else
 \fi
+
+%Q3
+\question{\label{ccs_psi_2023_q_03}  Déterminer alors $\Delta_{Y Z}$, la norme de la variation de positionnement total du point $D$ dans le plan $\left(\vec{y}_{1}, \vec{z}_{1}\right)$, en fonction de $\theta_{2,0}, \Delta_{\theta}, L_{2}$ et $L_{3}$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Le résultat de la question précédente permet alors de relier l'erreur de position du talon $S_{D}$ à l'erreur de position sur les axes $S_{\theta}$, en considérant $\Delta_{Y Z}=S_{D}$ et $\Delta_{\theta}=S_{\theta}$. La figure 5 donne les évolutions sur un pas de marche de $S_{D}$ pour plusieurs valeurs de $S_{\theta}$.
+%Q4
+\question{\label{ccs_psi_2023_q_04} 
+ À partir de la figure 5, déterminer, parmi les valeurs proposées, l'erreur maximale admissible sur les axes $S_{\theta, \max }$ de l'exosquelette Atalante afin d'éviter la chute du patient.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{fig_05}
+\caption{Evolution de $S_D$ sur un pas de marche\label{ccs_psi_2023_fig_05}}
+\end{figure}
+
+Quel que soit le résultat trouvé à la question précédente, une erreur maximale admissible de 0,01 rad pour chacun des axes sera considérée pour la suite.
+
+Afin de respecter l'exigence sur l'erreur maximale admissible, des asservissements de position et de vitesse ont été élaborés pour chacun des axes sans prendre en compte l'éventuelle influence du couplage entre les axes.
+
+Des essais ont alors été effectués afin de mesurer l'évolution réelle des angles de chaque axe par rapport à la trajectoire visée. La figure 6 montre l'évolution de l'erreur pour l'axe de hanche sagittal de la jambe gauche lors d'une marche en ligne droite.
+
+%Q 5
+\question{\label{ccs_psi_2023_q_05}  À partir de la figure 6 et en justifiant la réponse, conclure sur la capacité des asservissements réalisés sans prise en compte du couplage entre les axes à respecter l'exigence 1.2.1.1.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\begin{figure}[!h]
+\includegraphics[width=\textwidth]{2023_05_12_54c6a64d2ffce28d5c72g-04(3)}
+\caption{Évolution de l'erreur pour l'axe de hanche sagittal de la jambe gauche}
+\end{figure}
+
+
+
