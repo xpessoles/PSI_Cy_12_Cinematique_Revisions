@@ -80,6 +80,7 @@ On pose $\omega_{ij}(t)=\dfrac{\dd \theta_{ij}(t)}{\dd t} = \dot{\theta}_{ij}(t)
 \question{\label{q17} Déterminer la relation entre les paramètres angulaires $\theta_{32}(t)$, $\theta_{43}(t)$ et $\theta_{54}(t)$.}
 \ifprof
 \begin{corrige}
+On a $\angl{x_4}{x_2}=\angl{x_4}{x_3}+\angl{x_3}{x_2}$ soit $\indice{\theta}{54} = -\indice{\theta}{43} -\indice{\theta}{32}$.
 \end{corrige}
 \else
 \fi
@@ -101,6 +102,32 @@ On pose $\omega_{ij}(t)=\dfrac{\dd \theta_{ij}(t)}{\dd t} = \dot{\theta}_{ij}(t)
 $\theta_{32}(t)$ et les données géométriques du système.}
 \ifprof
 \begin{corrige}
+On écrit la fermeture géométrique suviante : $\vect{AB}+\vect{BC}+\vect{CA} = \vect{0}$.
+
+On a alors $L_3\vect{z_3}+L_4\vect{z_4}- \lambda(t)\vect{z_2} = \vect{0}$.
+
+On projette cette relation sur $\vect{z_2}$ et $\vect{x_2}$. On a donc  :
+$\left\{
+\begin{array}{l}
+L_3 \cos \indice{\theta}{32} + L_4 \cos\left( \indice{\theta}{32}+\indice{\theta}{43}\right) = \lambda(t)\\
+L_3 \sin \indice{\theta}{32} + L_4 \sin\left( \indice{\theta}{32}+\indice{\theta}{43}\right) = 0
+\end{array}
+\right.
+$.
+
+Puis on isole $\indice{\theta}{32}+\indice{\theta}{43}$ : 
+$\left\{
+\begin{array}{l}
+ L_4 \cos\left( \indice{\theta}{32}+\indice{\theta}{43}\right) = \lambda(t) -L_3 \cos \indice{\theta}{32} \\
+ L_4 \sin\left( \indice{\theta}{32}+\indice{\theta}{43}\right) = - L_3 \sin \indice{\theta}{32} 
+\end{array}
+\right.
+$
+On peut alors élever les expressions au carré et les sommer : $L_4^2 = \left(\lambda(t) -L_3 \cos \indice{\theta}{32} \right)^2+  L_3^2 \sin^2 \indice{\theta}{32} $.
+
+On a alors $L_4^2 -   L_3^2 \sin^2 \indice{\theta}{32}= \left(\lambda(t) -L_3 \cos \indice{\theta}{32} \right)^2 $ soit 
+
+$\lambda(t) = L_3 \cos \indice{\theta}{32} \pm\sqrt{L_4^2 -   L_3^2 \sin^2 \indice{\theta}{32}} $
 \end{corrige}
 \else
 \fi
@@ -109,6 +136,12 @@ $\theta_{32}(t)$ et les données géométriques du système.}
 l’application numérique et conclure sur le respect de l’exigence 1.2.2.3.}
 \ifprof
 \begin{corrige}
+\begin{itemize}
+\item Pour $\indice{\theta}{32} = 0$, $\indice{\lambda}{max} = L_3 + L_4 $
+\item Pour $\indice{\theta}{32} = \pi$, $\indice{\lambda}{min} = -L_3 + L_4 $
+\end{itemize}
+
+$\Delta z=  \indice{\lambda}{max} - \indice{\lambda}{min} = L_3 + L_4  - \left(-L_3 + L_4 \right)= L_3 + L_4  +L_3 -L_4 =2L_3  $
 \end{corrige}
 \else
 \fi
@@ -161,3 +194,10 @@ partir du modèle établi en question \ref{q17}.
 \end{corrige}
 \else
 \fi
+\begin{solution}
+\begin{enumerate}
+\item $\indice{\theta}{54} = -\indice{\theta}{43} -\indice{\theta}{32}$.
+\item $\lambda(t) = L_3 \cos \indice{\theta}{32} \pm\sqrt{L_4^2 -   L_3^2 \sin^2 \indice{\theta}{32}}$.
+\item $\Delta z=  2L_3  $.
+\end{enumerate}
+\end{solution}
