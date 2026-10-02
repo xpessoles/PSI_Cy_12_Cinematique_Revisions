@@ -51,6 +51,7 @@ Soit un point $P$ appartenant au solide $S_1$. La vitesse du point $P$ appartena
 \vect{V(P\in S_1/S_0)}(t) = \left[\dfrac{\text{d}\vect{O_0P(t)}}{\text{d}t}\right]_{\mathcal{R}_0}.
 $
 \end{defi}
+
 \marginnote{\xpComp{CIN}{02}}
 
 %\begin{exemple}
@@ -68,9 +69,19 @@ Lorsque il n'y a pas de degré de liberté de translation dans une liaison, la v
 \end{resultat}
 
 
+
+\begin{defi} [Vecteur instantané de rotation]
+Soient $S_0$ et $S_1$ deux solides en mouvements relatifs et $\mathcal{R}_0$ et $\mathcal{R}_1$ les repères orthonormés directs associés.  On note $\vect{\Omega(\mathcal{R}_1/\mathcal{R}_0)}$ le vecteur instantané de rotation permettant d'exprimer les rotations entre chacune des deux bases. Il est caractérisé par : 
+\begin{itemize}
+\item la direction de l'axe autour duquel tourne le solide;
+\item le sens dans lequel tourne le solide;
+\item la norme de la vitesse angulaire en \si{rad/s}.
+\end{itemize}
+\end{defi}
+
 \begin{resultat}[Dérivation vectorielle]
 
-Soient $S_0$ et $S_1$ deux solides en mouvements relatifs et $\mathcal{R}_0$ et $\mathcal{R}_1$ les repères orthonormés directs associés. Soit $\vect{v}$ un vecteur de l'espace. On note $\vect{\Omega(\mathcal{R}_1/\mathcal{R}_0)}$ le vecteur instantané de rotation permettant d'exprimer les rotations entre chacune des deux bases. La dérivée d'un vecteur dans une base mobile se calcule donc ainsi :
+Soit $\vect{v}$ un vecteur de l'espace. La dérivée de ce vecteur dans une base mobile se calcule ainsi :
 
 $$
 \left[\dfrac{\text{d}\vect{v}}{\text{d}t}\right]_{\mathcal{R}_0} =
@@ -117,6 +128,16 @@ $$
 \vecto{S_2}{S_1}+\vecto{S_1}{\mathcal{R}_0}
 $$
 \end{resultat}
+
+
+\begin{defi}[Torseur cinématique]
+
+Soit un solide $S_1$ en mouvement par rapport à un repère $\mathcal{R}_0$ et un solide $S_2$ par rapport au solide $S_1$. Le torseur cinématique est défini par :
+$$
+\torseurcin{V}{S_2}{S_1}
+= \torseurl{\vecto{S_2}{S_1}}{\vectv{A}{S_2}{S_1}}{A}
+$$
+\end{defi}
 
 \begin{defi}[Accélération d'un point appartenant à un solide]
 
